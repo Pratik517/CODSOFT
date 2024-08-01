@@ -1,0 +1,261 @@
+HTML:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Portfolio</title>
+    <link rel="stylesheet" href="task2.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>My Portfolio</h1>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="about">
+        <div class="container">
+           <img src="https://media.licdn.com/dms/image/D4D03AQE3RuaR04eT3Q/profile-displayphoto-shrink_800_800/0/1720440548711?e=1727913600&v=beta&t=qo5jQyuqsP6Sn1pMwK8vXv3v7v4l5wRmr1a-twy4lBU">
+           -
+            <h2>About Me</h2>
+            <p>Hello! I am a web developer with experience in creating dynamic and responsive websites. I love coding and am always eager to learn new technologies.</p>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="container">
+            <h2>Skills</h2>
+            <div class="skills-grid">
+                <div class="skill">
+                    <h3>HTML</h3>
+                </div>
+                <div class="skill">
+                    <h3>CSS</h3>
+                </div>
+                <div class="skill">
+                    <h3>JavaScript</h3>
+                </div>
+                <div class="skill">
+                    <h3>React</h3>
+                </div>
+                <div class="skill">
+                    <h3>Node.js</h3>
+                </div>
+                <div class="skill">
+                    <h3>Python</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="container">
+            <h2>Projects</h2>
+            <div class="projects-grid">
+                <div class="project">
+                    <h3>Project One</h3>
+                    <p> Persoanl Portfolio Website It's an amazing project that showcases my skills.</p>
+                </div>
+                <div class="project">
+                    <h3>Project Two</h3>
+                    <p>A small Quiz application.It's another fantastic project that demonstrates my abilities.</p>
+                </div>
+                <div class="project">
+                    <h3>Project Three</h3>
+                    <p>Temperature detector using Python.great project highlighting my capabilities.</p>
+                </div>
+            
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Contact</h2>
+            <p>Feel free to get in touch with me via email at <a href="get free in touch with">landepratik82@gmail.com</a>.</p>
+            <p>Connect me at <a href="www.linkedin.com/in/pratik-lande-538798257">linkedin</a></p>
+            <P>Phone:9370492453</P>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Your Name. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+
+CSS:
+
+
+
+img {
+   height:150px;
+   width:150px;
+   display:grid;
+   justify-content: center;
+   align-items:center;
+   border-radius: 50%;
+}
+body  
+ {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    background: #333;
+    color: white;
+    padding: 1rem 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 2rem;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+section {
+    padding: 2rem 0;
+}
+
+section .container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 2rem;
+}
+
+#about {
+    background: #f4f4f4;
+}
+
+#skills .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+}
+
+#skills .skill {
+    background: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+#projects .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+#projects .project {
+    background: #e2e2e2;
+    padding: 1rem;
+}
+
+#contact {
+    background: #d0d0d0;
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background: #333;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
